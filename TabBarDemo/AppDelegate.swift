@@ -13,9 +13,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
-
+    //当启动应用程序时触发
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        //1、创建窗口实例
+        window = UIWindow()
+        //2、设置窗口背景色
+        window?.backgroundColor = UIColor.white
+        //3、设置窗口实例的根视图控制器
+        window?.rootViewController = MainViewController()
+        //4、设置主窗口并显示出来
+        window?.makeKeyAndVisible()
+        
         return true
     }
 
